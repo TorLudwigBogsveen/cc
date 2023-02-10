@@ -58,7 +58,7 @@ function saveChestData(file_name)
     local data = {filter_type = filter_mode, storage_chests = storage_chests}
     --print (textutils.serialise(data))
     io.output(file_name)
-    io.write(textutils.serialise(data))
+    io.write(textutils.serialise(data, { allow_repetitions = true }))
     io.close()
 end
 
